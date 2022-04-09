@@ -25,7 +25,7 @@ async def get_price():
         async with session.get(f"https://api.coingecko.com/api/v3/simple/price?ids={ID}&vs_currencies={CURRENCY}") as r:
             if r.status == 200:
                 js = await r.json()
-                price = js[CONTRACT][CURRENCY]
+                price = js[ID][CURRENCY]
                 pricestring = (f"{NAME}: ${price}")
                 return pricestring
 
