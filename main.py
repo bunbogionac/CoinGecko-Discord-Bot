@@ -13,7 +13,7 @@ load_dotenv()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 REFRESH_TIMER = os.getenv('REFRESH_TIMER')
-CONTRACT = os.getenv('CONTRACT')
+ID = os.getenv('CONTRACT')
 NAME = os.getenv('NAME')
 CHAIN = os.getenv('CHAIN')
 CURRENCY = os.getenv('CURRENCY')
@@ -22,7 +22,7 @@ client = discord.Client()
 
 async def get_price():
     async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://api.coingecko.com/api/v3/simple/price?ids={id}&vs_currencies={CURRENCY}") as r:
+        async with session.get(f"https://api.coingecko.com/api/v3/simple/price?ids={ID}&vs_currencies={CURRENCY}") as r:
             if r.status == 200:
                 js = await r.json()
                 price = js[CONTRACT][CURRENCY]
