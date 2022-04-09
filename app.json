@@ -6,7 +6,7 @@
   "env": {
     "CONTRACT": {
       "description": "Contract of the token/asset: e.g. 0xdac17f958d2ee523a2206206994597c13d831ec7",
-      "value": "0xdac17f958d2ee523a2206206994597c13d831ec7"
+      "value": "IOTA"
     },
     "NAME": {
       "description": "Name of the token/asset which will be shown before the price.",
@@ -14,10 +14,11 @@
     },
     "CHAIN": {
       "description": "Chain of the token. probably ethereum",
-      "value": "ethereum"
+      "value": "IOTA"
     },
     "DISCORD_TOKEN":{
       "description": "API token of the Discord bot."
+      "value": "IOTA"
     },
     "CURRENCY":{
       "description": "Currency",
